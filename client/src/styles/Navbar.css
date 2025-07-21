@@ -1,0 +1,81 @@
+:root {
+  --midnight: #1e1b2e;
+  --lavender: #b8aee0;
+  --moonlight: #f6f0ff;
+  --blush: #e8a9c4;
+  --gold-dust: #f9e4b7;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  font-family: "Cinzel", serif;
+
+  border-radius: 0 0 16px 16px;
+}
+
+.navbar-logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--lavender);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-logo a:hover {
+  opacity: 0.85;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar-links a {
+  font-size: 1rem;
+  color: var(--moonlight);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navbar-links a:hover {
+  color: var(--blush);
+  text-shadow: 0 0 6px var(--blush);
+}
+
+.logout-btn {
+  background-color: transparent;
+  border: 2px solid var(--lavender);
+  color: var(--lavender);
+  padding: 0.45rem 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}

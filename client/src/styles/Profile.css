@@ -1,0 +1,250 @@
+:root {
+  /* 🎨 Color Palette */
+  --midnight: #1e1b2e;
+  --lavender: #b8aee0;
+  --moonlight: #f6f0ff;
+  --blush: #e8a9c4;
+  --gold-dust: #f9e4b7;
+  --deep-purple: #2a243d;
+
+  /* ✏️ Optional Tweaks */
+  --error-red: #ff6b6b;
+  --light-fade: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.03);
+}
+
+/* 🌟 Profile Page Container */
+.profile-container {
+  max-width: 720px;
+  margin: 6rem auto 3rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--light-fade);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: var(--moonlight);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🖋 Section Header */
+.profile-container h2 {
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  color: var(--lavender);
+  text-align: center;
+}
+
+/* 🪪 Profile Card with Partner Info */
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--light-fade);
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+/* 👤 Current User + Partner */
+.profile-user,
+.profile-partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 100px;
+}
+
+/* 💖 Heart Section + Anniversary */
+.profile-heart {
+  font-size: 2.2rem;
+  color: var(--blush);
+  flex: 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.profile-heart span {
+  display: block;
+}
+
+/* 💞 Anniversary Text Below Heart */
+.anniversary-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold-dust);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  white-space: pre-line; /* ensures line breaks are respected */
+}
+
+.anniversary-text #heart {
+  font-size: 2rem;
+}
+
+/* 🖼 Avatar Image */
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid var(--lavender);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* 📸 Default/Empty Avatar */
+.placeholder-avatar {
+  background-color: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+}
+
+/* 🧑 Display & Partner Name */
+.profile-card h3 {
+  font-size: 1.3rem;
+  color: var(--gold-dust);
+  margin: 0;
+}
+
+/* ⛔ Disconnected Partner Style */
+.partner-disconnected {
+  color: #888;
+  font-style: italic;
+}
+
+/* 🧾 Form Section */
+.profile-section {
+  margin-bottom: 1.5rem;
+}
+
+/* 🏷️ Section Labels */
+.profile-section label {
+  display: block;
+  font-weight: 600;
+  color: var(--gold-dust);
+  margin-bottom: 0.5rem;
+  font-family: "Cinzel", serif;
+}
+
+/* ✍️ Text & Password Inputs */
+.profile-section input[type="text"],
+.profile-section input[type="password"],
+.profile-section input[type="date"] {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--lavender);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--moonlight);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* 🖼 File Input for Profile Pic */
+.profile-section input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--lavender);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--moonlight);
+  font-size: 0.85rem;
+  box-sizing: border-box;
+}
+
+/* 📤 Upload Button Styling */
+.profile-section input[type="file"]::-webkit-file-upload-button {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid var(--lavender);
+  background-color: transparent;
+  color: var(--lavender);
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-section input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}
+
+/* ✅ General Buttons */
+.profile-section button {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid var(--lavender);
+  background-color: transparent;
+  color: var(--lavender);
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-section button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}
+
+/* ❌ Disconnect Partner Button */
+.disconnect-button {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid var(--error-red);
+  background-color: transparent;
+  color: var(--error-red);
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.disconnect-button:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}
+
+/* 🔁 Input spacing (password/anniversary/etc) */
+.profile-section input + input {
+  margin-top: 0.75rem;
+}
+
+/* 📩 Incoming Partner Request Styling */
+.profile-section.incoming-request {
+  margin-top: 2rem;
+  border-top: 1px solid var(--light-fade);
+  padding-top: 1.2rem;
+}
+
+/* 📢 Status/Error Message */
+.profile-message {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold-dust);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--gold-dust);
+}
+
+/* 🚨 Error Message Color Fix */
+.profile-message.error {
+  color: var(--error-red);
+  border-color: var(--error-red);
+}

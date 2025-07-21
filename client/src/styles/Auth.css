@@ -1,0 +1,184 @@
+:root {
+  /* 🎨 Shared Color Palette */
+  --midnight: #1e1b2e;
+  --lavender: #b8aee0;
+  --moonlight: #f6f0ff;
+  --blush: #e8a9c4;
+  --gold-dust: #f9e4b7;
+  --slate: #7a7a8c;
+
+  /* ✏️ Optional Accent / Error Colors */
+  --error-red: #ff6b6b;
+}
+
+/* 🌌 Base Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #35234b, #1c1a2b);
+  font-family: "Cinzel", serif;
+  color: var(--moonlight);
+}
+
+/* 🧭 Page Layout */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20vh;
+  background: radial-gradient(circle at top left, #35234b, #1c1a2b);
+}
+
+/* 📦 Auth Container Card */
+.auth-container {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--moonlight);
+  border-radius: 16px;
+  padding: 48px 36px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  max-width: 420px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* 📍 Title */
+.auth-container h2 {
+  text-align: center;
+  font-size: 26px;
+  color: var(--lavender);
+  letter-spacing: 1px;
+  margin-bottom: 1.8rem;
+  font-family: "Cinzel", serif;
+}
+
+/* 🧾 Form Layout */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🏷️ Input Labels */
+.auth-container label {
+  margin: 14px 0 6px;
+  font-weight: 600;
+  color: var(--gold-dust);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ✍️ Input Fields (Text + Email + Password) */
+.auth-container input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--lavender); /* Match profile input */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--moonlight);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* 🧠 Focused Input Field */
+.auth-container input:focus {
+  border-color: var(--lavender);
+  box-shadow: 0 0 0 3px rgba(184, 174, 224, 0.2);
+  outline: none;
+}
+
+/* 🔒 Password Field with Toggle Wrapper */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* 👁️ Password Toggle Button */
+.toggle-password {
+  position: absolute;
+  top: 60%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--lavender);
+}
+
+/* ✅ Auth Buttons */
+.auth-container button {
+  margin-top: 1.4rem;
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: var(--lavender);
+  border: 2px solid var(--lavender);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🧊 Disabled Button */
+.auth-container button:disabled {
+  background-color: #ccc;
+  color: #444;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 🚀 Hover Effect */
+.auth-container button:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}
+
+/* 📝 Paragraph Below Form */
+.auth-container p {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--lavender);
+  font-size: 14px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🔗 Auth Links (e.g., Log in / Sign up) */
+.auth-container a {
+  color: var(--blush);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* 🚨 Error Message Box */
+.error {
+  background-color: rgba(255, 0, 0, 0.1); /* light red bg */
+  color: #ff4d4d; /* bright red font */
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-family: "Segoe UI", sans-serif;
+  border: 1px solid #ff4d4d; /* optional red border */
+}
+
+/* 🌀 Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
