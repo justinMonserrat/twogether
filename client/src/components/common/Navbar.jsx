@@ -28,6 +28,9 @@ export default function Navbar() {
           <Link to="/explore">Explore</Link>
         </li>
         <li>
+          <Link to="/collections">Collections</Link>
+        </li>
+        <li>
           <Link to="/profile">Profile</Link>
         </li>
         <li>

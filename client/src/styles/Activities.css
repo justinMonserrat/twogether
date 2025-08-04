@@ -1,0 +1,303 @@
+/* -------------------------------------
+🌌 General Page Layout
+-------------------------------------- */
+.activities-page {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  color: var(--moonlight);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* -------------------------------------
+🌤️ ZIP Input + Weather Row
+-------------------------------------- */
+.weather-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.zip-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zip-form label {
+  font-weight: 600;
+  color: var(--gold-dust);
+}
+
+.zip-form input {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--lavender);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--moonlight);
+  font-size: 0.9rem;
+  width: 100px;
+}
+
+.zip-form button {
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--lavender);
+  background: transparent;
+  color: var(--lavender);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.zip-form button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+}
+
+.weather-status {
+  font-size: 0.95rem;
+  color: var(--gold-dust);
+  background: var(--card-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--light-fade);
+}
+
+/* -------------------------------------
+🎛️ Filters Panel
+-------------------------------------- */
+.filters-bar {
+  background-color: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--light-fade);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: var(--moonlight);
+}
+
+.filters-bar h3 {
+  font-size: 1.2rem;
+  color: var(--lavender);
+  margin-bottom: 1rem;
+}
+
+.filters-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-group label,
+.filter-group select {
+  font-size: 0.95rem;
+  color: var(--gold-dust);
+}
+
+.filter-group select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--lavender);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--moonlight);
+  font-size: 1rem;
+}
+
+/* Inline checkboxes */
+.tag-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* -------------------------------------
+🎲 Surprise Button
+-------------------------------------- */
+.activity-generator {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.activity-generator button {
+  background-color: transparent;
+  border: 2px solid var(--lavender);
+  color: var(--lavender);
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activity-generator button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}
+
+/* -------------------------------------
+🎲 Activity Generator
+-------------------------------------- */
+.activity-generator {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.activity-generator button {
+  background-color: transparent;
+  border: 2px solid var(--lavender);
+  color: var(--lavender);
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activity-generator button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}
+
+/* -------------------------------------
+🗂️ Activity Grid + Cards
+-------------------------------------- */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.activity-card {
+  background: var(--card-bg);
+  border: 1px solid var(--light-fade);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.activity-card h3 {
+  color: var(--lavender);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-card p {
+  font-size: 0.9rem;
+  color: var(--gold-dust);
+}
+
+.activity-card button {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  color: var(--blush);
+  transition: transform 0.2s;
+}
+
+.activity-card button:hover {
+  transform: scale(1.2);
+}
+
+/* -------------------------------------
+💾 Saved Activities
+-------------------------------------- */
+.saved-activities {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--light-fade);
+}
+
+.saved-activities h2 {
+  color: var(--lavender);
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.saved-activities ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.saved-activities li {
+  margin: 0.5rem 0;
+  color: var(--gold-dust);
+  text-align: center;
+}
+
+/* -------------------------------------
+📝 Custom Activity Form
+-------------------------------------- */
+.custom-activity-form {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border: 1px solid var(--light-fade);
+  border-radius: 12px;
+  margin-top: 3rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.custom-activity-form h3 {
+  text-align: center;
+  color: var(--lavender);
+  font-family: "Cinzel", serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.custom-activity-form input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--lavender);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--moonlight);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.custom-activity-form button {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--lavender);
+  color: var(--lavender);
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-activity-form button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--moonlight);
+  border-color: var(--moonlight);
+}

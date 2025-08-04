@@ -1,0 +1,81 @@
+/* Explore.css */
+
+.explore-page {
+  display: flex;
+  height: calc(100vh - 60px); /* adjust if your navbar height is different */
+  margin-top: 60px;
+  font-family: "Segoe UI", sans-serif;
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+.explore-left {
+  width: 35%;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #2a2a40;
+  border-right: 1px solid #444;
+}
+
+.explore-left h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.filters-row {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.filters-row button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #3d4a6e;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filters-row button:hover {
+  background-color: #566a9b;
+}
+
+.places-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.place-card {
+  background-color: #3a3a50;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.place-card:hover {
+  background-color: #4b4b67;
+  transform: scale(1.02);
+}
+
+.place-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.place-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #cfcfcf;
+}
+
+.explore-map {
+  flex: 1;
+  height: 100%;
+}
